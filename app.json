@@ -1,0 +1,12 @@
+{
+  "name": "GroceryStore",
+  "displayName": "GroceryStore",
+  "expo": {
+    "name": "GroceryStore",
+    "slug": "GroceryStore",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
