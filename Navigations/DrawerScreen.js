@@ -9,6 +9,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { useWindowDimensions } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import BottomTab from './BottomTab';
+import CustomizeDrawer from './CustomizeDrawer';
 
 
 const Drawer = createDrawerNavigator();
@@ -20,26 +21,26 @@ const DrawerScreen = () => {
    
         return (
            <Drawer.Navigator 
+         drawerContent={props => <CustomizeDrawer {...props} />}>
       
-              drawerContentOptions={{
-              activeTintColor: '#e74c3c',
-              activeBackgroundColor:   '#d6eaf8'  ,
-              labelStyle: {fontSize:14, fontWeight:'bold'},
+            {/* drawerContentOptions={{ 
+          //     activeTintColor: '#e74c3c',
+          //     activeBackgroundColor:   '#d6eaf8'  ,
+          //     labelStyle: {fontSize:14, fontWeight:'bold'},
               
               
-            }}
-            screenOptions ={{
-              headerShown: true,
-              headerTitle:'Grocery Store',
-              headerTintColor:'#e74c3c',
-              headerTitleAlign:'center',
-           }}
+          //   }}
+          //   screenOptions ={{
+          //     headerShown: true,
+          //     headerTitle:'Grocery Store',
+          //     headerTintColor:'#e74c3c',
+          //     headerTitleAlign:'center',
+          //  }}
             
             
-            drawerStyle={ { width: '75%', }}
-            overlayColor="transparent"
-            
-      >
+          //   drawerStyle={ { width: '75%', }}
+          //   overlayColor="transparent"
+            //>*/}
 
             <Drawer.Screen name="Home" component={BottomTab}
               options={{          
